@@ -171,7 +171,13 @@ li{
     z-index: 1500;
     transition: transform 650ms ease-out;
     animation: grow 1s 1s;
+    transition: 1s;
+}
 
+.menu-toggler:hover{
+    width: 7rem;
+    height: 6rem;
+    transition: 1s;
 }
 
 .menu-toggler.open{
@@ -238,6 +244,7 @@ li{
 
 /*Start about*/
 .about .container{
+    margin-top: 50px; /* lowers about of off front view */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -267,6 +274,10 @@ li{
 
 .about-details{
     flex: 1;
+}
+
+.about-details p{
+    font-size: 2.5rem;
 }
 
 .social-media{
@@ -689,3 +700,30 @@ input[type="submit"]{
 
 }
 /*End media queries*/
+
+
+/* START */
+/* START */
+/* START */
+
+/*Start portfolio*/
+.portfolio-description a:last-of-type{
+    margin-top: 0;
+}
+
+.project-skills {
+    list-style: none;
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.portfolio-description i{
+    font-size: 5rem;
+    transition: color 650ms;
+}
+
+.portfolio-img:hover{
+    flex: 3;
+}
+/*End portfolio*/
