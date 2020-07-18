@@ -21,6 +21,32 @@ $(document).ready(function () {
         }, 1000);
     });
 
+    // Toggle gifs
+    $('#project-img-1').on('click', function () {
+      $(this).removeClass('state-on')
+      $(this).toggleClass('state-off')
+
+      $('#project-img-0').removeClass('state-off')
+      $('#project-img-0').toggleClass('state-on')
+
+      // Turn off zoom
+      $('.portfolio-img-0').removeClass('portfolio-img-zoom-on')
+      $('.portfolio-img-0').toggleClass('portfolio-img-zoom-off')
+    });
+
+    $('#project-img-0').on('click', function () {
+      $(this).removeClass('state-on')
+      $(this).toggleClass('state-off')
+
+      $('#project-img-1').removeClass('state-off')
+      $('#project-img-1').toggleClass('state-on')
+
+      // Turn on zoom
+      $('.portfolio-img-0').removeClass('portfolio-img-zoom-off')
+      $('.portfolio-img-0').toggleClass('portfolio-img-zoom-on')
+
+    });
+
     AOS.init({
         easing: 'ease',
         duration: 1800,

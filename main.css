@@ -226,7 +226,6 @@ li{
 
 .landing-text h1{
     font-size: 20rem;
-    /* font-family: 'Historia_Demo'; */
     background: linear-gradient(to top, #ffe838, #fd57bf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -289,29 +288,6 @@ li{
     transition: color 650ms;
 }
 
-/* .fa-facebook-square:hover{
-    color: #4267b2
-}
-
-.fa-twitter-square:hover{
-    color: #38a1f3
-}
-
-.fa-dribbble-square:hover{
-    color: #ea4c89
-} */
-
-.fa-github-square:hover{
-    color: #4267b2;
-}
-
-.fa-envelope-square:hover{
-    color: #4267b2;
-}
-
-.fa-file:hover{
-    color: #4267b2;
-}
 /*End about*/
 
 /*Start services*/
@@ -706,6 +682,111 @@ input[type="submit"]{
 /* START */
 /* START */
 
+/* Start reusable */
+.section-heading {
+    
+}
+/* End reusable */
+
+/* Start font-face */
+@font-face{
+    font-family: 'ArcticFF';
+    src: url(fonts/ArcticFF/Arctic.otf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face{
+    font-family: 'AgneFF';
+    src: url(fonts/AgneFF/Agne.otf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: 'MoonFF-bold';
+    src: url(fonts/MoonFF/MoonBold.otf);
+    font-style: normal;
+    /* font-weight: 100; */
+}
+
+@font-face{
+    font-family: 'MoonFF-light';
+    src: url(fonts/MoonFF/MoonLight.otf);
+    font-style: normal;
+    /* font-weight: 100; */
+}
+
+.nav-link{
+    /* FIXME: This isn't copyrighted */
+    font-family: MoonFF-bold, sans-serif;
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+.landing-text h1{
+    font-size: 15rem;
+    background: linear-gradient(to top, #ffe838, #fd57bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1rem;
+    user-select: none;
+    font-family: MoonFF-bold, sans-serif;
+    display: inline;
+}
+
+.landing-text h6, .landing-text span {
+    font-family: MoonFF-light, sans-serif;
+}
+
+.about-details p {
+    font-family: MoonFF-light, sans-serif;
+    font-size: 2rem;
+}
+
+.section-heading {
+    margin-top: 400px;
+}
+
+.section-heading h1 {
+    font-family: MoonFF-bold, sans-serif;
+    font-size: 6rem;
+}
+
+.section-heading h6 {
+    font-family: MoonFF-light, sans-serif;
+    font-size: 2rem;
+}
+
+.portfolio-description h6{
+    font-family: MoonFF-light, sans-serif;
+    font-size: 7rem;
+}
+
+.portfolio-description h1{
+    font-family: MoonFF-bold, sans-serif;
+    font-size: 2.5rem;
+}
+
+.portfolio-description ul{
+    font-family: MoonFF-light, sans-serif;
+    font-size: 2.5rem;
+}
+
+.contact form{
+    font-family: MoonFF-light, sans-serif;
+    font-size: 1.5rem;
+}
+
+.contact form label{
+    font-family: MoonFF-bold, sans-serif;
+}
+
+.boldff{
+    font-family: MoonFF-bold, sans-serif;
+}
+/* End font-face */
+
 /*Start portfolio*/
 .portfolio-description a:last-of-type{
     margin-top: 0;
@@ -718,12 +799,96 @@ input[type="submit"]{
     color: rgba(255, 255, 255, 0.4);
 }
 
-.portfolio-description i{
-    font-size: 5rem;
-    transition: color 650ms;
+.project-0-links {
+    margin-left: 5rem;
 }
 
-.portfolio-img:hover{
+.project-1-links {
+    text-align: center;
+    /* margin-left: 13rem; */
+}
+
+.portfolio-description i{
+    font-size: 5rem;
+    color: ivory;
+    margin-left: 3rem;
+    opacity: 0.5;
+}
+
+i {
+    color: ivory;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+i:hover{
+    color: white;
+    opacity: 1;
+    transition: 1s;
+}
+
+#project-img-0:hover{
+    cursor: pointer;
+}
+
+.portfolio-img-zoom-on:hover{
     flex: 3;
+    transition: 2s;
+}
+
+.state-off{
+    display: none;
+}
+
+.portfolio-description ul{
+    margin-left: 11rem;
+}
+
+.portfolio-description li{
+    margin-top: 1.5rem;
+}
+
+.portfolio-item{
+    margin-bottom: 13rem;
 }
 /*End portfolio*/
+
+/* Start contact */
+.contact form input{
+    /* text-transform: lowercase;
+    color: red; */
+}
+/* End contact */
+
+/* Begin media queries */
+@media screen and (max-width: 1600px) {
+    .nav-list{
+        flex-direction: column;
+    }
+    .nav-list li{
+        margin: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .landing-text h1{
+        font-size: 10rem;
+    }
+
+    /* .nav-list{
+        flex-direction: column;
+    } */
+}
+
+@media screen and (max-width: 700px) {
+    .landing-text h1{
+        font-size: 5rem;
+    }
+}
+/* End media queries */
+
+/* Start forceful */
+html body{
+    color: #eee;
+}
+/* End forceful */
