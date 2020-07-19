@@ -705,14 +705,16 @@ input[type="submit"]{
 
 @font-face{
     font-family: 'MoonFF-bold';
-    src: url(fonts/MoonFF/MoonBold.otf);
+    /* src: url(fonts/MoonFF/MoonBold.otf); */
+    src: url(../fonts/MoonFF/MoonBold.otf);
     font-style: normal;
     /* font-weight: 100; */
 }
 
 @font-face{
     font-family: 'MoonFF-light';
-    src: url(fonts/MoonFF/MoonLight.otf);
+    /* src: url(MoonFF/MoonLight.otf); */
+    src: url(../fonts/MoonFF/MoonLight.otf);
     font-style: normal;
     /* font-weight: 100; */
 }

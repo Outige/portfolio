@@ -9,10 +9,13 @@
     
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='images/css/main.css') }}">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='images/css/main.css') }}"> -->
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo0.png') }}">
 </head>
-<body>
+
+<!-- <body style="background: url(../static/images/sitebg.jpg);"> -->
+<body style="background: url({{ url_for('static', filename='images/sitebg.jpg') }})  no-repeat center fixed;">
 
     <header>
         <div class="menu-toggler">
@@ -23,16 +26,17 @@
         <nav class="top-nav">
             <ul class="nav-list">
                 <li>
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="/" class="nav-link">Home</a>
+                    <!-- <a href="index.html" class="nav-link">Home</a> -->
                 </li>
                 <li>
                     <a href="#about" class="nav-link about-link">About</a>
                 </li>
                 <li>
-                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#portfolio" class="nav-link">Projects</a>
                 </li>
                 <li>
-                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#services" class="nav-link">Skills</a>
                 </li>
                 <li>
                     <a href="#experience" class="nav-link">Experience</a>
@@ -67,9 +71,8 @@
         </div>
         <div class="container">
             <div class="profile-img" data-aos="fade-right" data-aos-delay="300">
-                <img src="{{ url_for('static', filename='images/images/profile1.jpg') }}" alt="">
-                <!-- <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/profile1.jpg') }}"> -->
-
+                <img src="../static/images/profile1.jpg" alt="">
+                <!-- <img src="{{ url_for('static', filename='images/images/profile1.jpg') }}" alt=""> -->
             </div>
             <div class="about-details" data-aos="fade-left" data-aos-delay="600">
 
@@ -111,7 +114,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="documnets/cv.pdf" class="icon-link" target="_blank">
+                            <a href="../static/documnets/cv.pdf" class="icon-link" target="_blank">
+                            <!-- <a href="documnets/cv.pdf" class="icon-link" target="_blank"> -->
                                 <i class="fa fa-file"></i>
                             </a>
                         </li>
@@ -130,8 +134,9 @@
 
             <div class="portfolio-item">
                 <div class="portfolio-img-0 portfolio-img has-margin-right portfolio-img-zoom-off" data-aos="fade-right" data-aos-delay="300">
+                    <!-- <img src="../static/images/play4.png" class="default-static state-active state-on" id="project-img-0"> -->
                     <img src="{{ url_for('static', filename='images/play4.png') }}" class="default-static state-active state-on" id="project-img-0">
-                    <img src="images/project0.gif" class="default-active state-active state-off" id="project-img-1">
+                    <img src="../static/images/project0.gif" class="default-active state-active state-off" id="project-img-1">
                 </div>
                 <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
                     <h6>Envelope</h6>
@@ -173,13 +178,13 @@
                     </div>
                 </div>
                 <div class="portfolio-img-1 portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
-                    <img src="images/github0.png" id="project-img-1">
+                    <img src="../static/images/github0.png" id="project-img-1">
                 </div>
             </div>
 
             <div class="portfolio-item">
                 <div class="portfolio-img-1 portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
-                    <img src="images/loading0.png" id="project-img-2">
+                    <img src="../static/images/loading0.png" id="project-img-2">
                 </div>
                 <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
                     <h6>horizon-12 (coming soon)</h6>
@@ -192,28 +197,6 @@
                 </div>
             </div>
 
-            <!-- <div class="portfolio-item">
-                <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="900">
-                    <h6>Web Design</h6>
-                    <h1>Product layout</h1>
-                    <p>Lorem ipsum dolor sit amet</p>
-                    <a href="#" class="cta">View details</a>
-                </div>
-                <div class="portfolio-img">
-                    <img src="images/portitem2.jpeg" data-aos="fade-left" data-aos-delay="1200">
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="1500">
-                    <img src="images/portitem3.jpeg">
-                </div>
-                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="1800">
-                    <h6>Web Design</h6>
-                    <h1>Product Sketch</h1>
-                    <p>Lorem ipsum dolor sit amet</p>
-                    <a href="#" class="cta">View details</a>
-                </div>
-            </div> -->
         </div>
     </section>
 
@@ -427,7 +410,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <!-- <script src="main.js"></script> -->
-    <script src="{{ url_for('static', filename='images/js/main.js') }}"></script>
+    <script src="../static/js/main.js"></script>
+    <!-- <script src="{{ url_for('static', filename='images/js/main.js') }}"></script> -->
 </body>
 </html>
