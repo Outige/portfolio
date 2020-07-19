@@ -24,18 +24,18 @@ mail = Mail(app)
 
 @app.route('/email/send', methods = ['GET', 'POST'])
 def send():
-    try:
-        result = request.form
-        subject = str(result['subject'])
-        email = str(result['email'])
-        body = str(result['body'])
+    # try:
+    result = request.form
+    subject = str(result['subject'])
+    email = str(result['email'])
+    body = str(result['body'])
 
-        msg = Message('Mail from your Website', sender='dummy999@gmail.com', recipients=['tiegosullivanpsnl@gmail.com'] )
-        msg.body = 'From: ' + email + 'Subject: ' + subject + "\n\n" + body
-        msg.subject = subject
-        mail.send(msg)
-    except:
-        return render_template('message.html', msg="Something went wrong")
+    msg = Message('Mail from your Website', sender='dummy999@gmail.com', recipients=['tiegosullivanpsnl@gmail.com'] )
+    msg.body = 'From: ' + email + 'Subject: ' + subject + "\n\n" + body
+    msg.subject = subject
+    mail.send(msg)
+    # except:
+        # return render_template('message.html', msg="Something went wrong")
 
     return render_template('message.html', msg="Message received, Thank you!")
 
