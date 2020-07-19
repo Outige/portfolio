@@ -805,8 +805,38 @@ input[type="submit"]{
     margin-left: 5rem;
 }
 
+@keyframes up-down {
+    0%{
+        /* box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99); */
+        position: relative;
+        top: 0rem;
+    }
+    25%{
+        /* box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0); */
+        position: relative;
+        top: -2rem;
+    }
+    50%{
+        /* box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0); */
+        position: relative;
+        top: 0rem;
+    }
+    100%{
+        /* box-shadow: 0 0 0 0 rgba(253, 87, 191, 0); */
+        position: relative;
+        top: 0rem;
+    }
+}
+
+.portfolio-img-0.on-first-click{
+    animation: up-down 4s infinite;
+}
+
+
+
 .project-1-links {
     text-align: center;
+
     /* margin-left: 13rem; */
 }
 

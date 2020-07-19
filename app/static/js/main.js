@@ -37,6 +37,9 @@ $(document).ready(function () {
     $('#project-img-0').on('click', function () {
       $(this).removeClass('state-on')
       $(this).toggleClass('state-off')
+      
+      // Turn off clickme bounce
+      $('.portfolio-img-0').removeClass('on-first-click')
 
       $('#project-img-1').removeClass('state-off')
       $('#project-img-1').toggleClass('state-on')
