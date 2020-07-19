@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Response</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/message.css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo0.png') }}">
+
+</head>
+<body style="background: url({{ url_for('static', filename='images/sitebg.jpg') }})  no-repeat center fixed;">
+    <form action="/" method="GET" id="f1" name="f1">
+    </form>
+    <div>
+        <label for="">{{ msg }}</label>
+        <br>
+        <input type="submit" value="Back" form="f1">
+    </div>
+</body>
+</html>
