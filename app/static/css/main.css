@@ -776,7 +776,7 @@ input[type="submit"]{
 }
 
 .contact form{
-    font-family: MoonFF-light, sans-serif;
+    font-family: sans-serif;
     font-size: 1.5rem;
 }
 
@@ -806,23 +806,35 @@ input[type="submit"]{
 }
 
 @keyframes up-down {
-    0%{
-        /* box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99); */
+    /* 0%{
         position: relative;
         top: 0rem;
     }
     25%{
-        /* box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0); */
         position: relative;
         top: -2rem;
     }
     50%{
-        /* box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0); */
         position: relative;
         top: 0rem;
     }
     100%{
-        /* box-shadow: 0 0 0 0 rgba(253, 87, 191, 0); */
+        position: relative;
+        top: 0rem;
+    } */
+    0%{
+        position: relative;
+        top: 0rem;
+    }
+    10%{
+        position: relative;
+        top: -2rem;
+    }
+    30%{
+        position: relative;
+        top: 0rem;
+    }
+    100%{
         position: relative;
         top: 0rem;
     }
@@ -922,5 +934,9 @@ i:hover{
 /* Start forceful */
 html body{
     color: #eee;
+}
+
+.about .section-heading{
+    margin-top: 0;
 }
 /* End forceful */
