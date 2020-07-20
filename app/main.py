@@ -17,25 +17,27 @@ app.config.update(
     MAIL_SERVER = 'smtp.gmail.com',
     MAIL_PORT = 465,
     MAIL_USE_SSL = True,
-    MAIL_USERNAME = 'dummy999@gmail.com',
+    MAIL_USERNAME = os.environ.get('email'),
     MAIL_PASSWORD = os.environ.get('password')
 )
 mail = Mail(app)
 
 @app.route('/email/send', methods = ['GET', 'POST'])
 def send():
-    # try:
-    result = request.form
-    subject = str(result['subject'])
-    email = str(result['email'])
-    body = str(result['body'])
+    try:
+        print(os.environ.get('password'))
+        print(app.config.get('MAIL_PASSWORD'), app.config.get('MAIL_USERNAME'), "\n\n\n\n\n")
+        result = request.form
+        subject = str(result['subject'])
+        email = str(result['email'])
+        body = str(result['body'])
 
-    msg = Message('Mail from your Website', sender='dummy999@gmail.com', recipients=['tiegosullivanpsnl@gmail.com'] )
-    msg.body = 'From: ' + email + 'Subject: ' + subject + "\n\n" + body
-    msg.subject = subject
-    mail.send(msg)
-    # except:
-        # return render_template('message.html', msg="Something went wrong")
+        msg = Message('Mail from your Website', sender=os.environ.get('email'), recipients=['tiegosullivanpsnl@gmail.com'] )
+        msg.body = 'From: ' + email + 'Subject: ' + subject + "\n\n" + body
+        msg.subject = subject
+        mail.send(msg)
+    except:
+        return render_template('message.html', msg="Something went wrong")
 
     return render_template('message.html', msg="Message received, Thank you!")
 
