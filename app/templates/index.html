@@ -10,12 +10,29 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/light.css">
     <!-- <link rel="stylesheet" href="{{ url_for('static', filename='images/css/main.css') }}"> -->
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo0.png') }}">
 </head>
 
+<style>
+body.light-mode{
+    background: url(../static/images/sitebgw0.jpg)  no-repeat center fixed;
+}
+body.dark-mode{
+    background: url(../static/images/sitebg.jpg)  no-repeat center fixed;
+}
+</style>
+
 <!-- <body style="background: url(../static/images/sitebg.jpg);"> -->
-<body style="background: url({{ url_for('static', filename='images/sitebg.jpg') }})  no-repeat center fixed;">
+<!-- <body style="background: url({{ url_for('static', filename='images/sitebgw0.jpg') }})  no-repeat center fixed;"> -->
+<body class="dark-mode">
+<div class="body-all">
+
+    <div class="mode">
+        <img src="../static/images/moon0.png" alt="" class="mode-img light-mode dark-off">
+        <img src="../static/images/sun.png" alt="" class="mode-img dark-mode light-off">
+    </div>
 
     <header>
         <div class="menu-toggler">
@@ -404,5 +421,6 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="../static/js/main.js"></script>
     <!-- <script src="{{ url_for('static', filename='images/js/main.js') }}"></script> -->
+</div>
 </body>
 </html>

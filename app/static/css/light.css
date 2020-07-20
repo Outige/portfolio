@@ -1,0 +1,65 @@
+/* Start no-effect in darkmode */
+body.dark-mode .dark-off,
+body.light-mode .light-off{
+    /* display: none; */
+    /* opacity: 0; */
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    cursor: pointer;
+    transition: 1s;
+    float: left;
+    opacity: 0;
+    pointer-events: none;
+}
+/* body.light-mode .light-off{
+    display: none;
+} */
+/* End no-effect in darkmode */
+
+body.light-mode .body-all{
+    background-color: rgba(0,0,0,0.05);
+}
+
+.light-mode .mode .light-mode,
+.dark-mode .mode .dark-mode{
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+    left: 2rem;
+    top: 2rem;
+    cursor: pointer;
+    float: left;
+    opacity: 1;
+    transition: 1s;
+}
+
+.mode .on-first-click{
+    animation: grow2 1s 1s;
+}
+
+.light-mode .mode .light-mode:hover,
+.dark-mode .mode .dark-mode:hover{
+    width: 10rem;
+    height: 10rem;
+    transition: 1s;
+}
+
+/* Start animations */
+@keyframes grow2 {
+    0%{
+        width: 8rem;
+        height: 8rem;
+    }
+    50%{
+        width: 10rem;
+        height: 10rem;
+    }
+    100%{
+        width: 8rem;
+        height: 8rem;
+    }
+}
+/* End animations */

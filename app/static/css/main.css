@@ -457,6 +457,7 @@ li{
 
 }
 
+
 form{
     width: 70%;
     margin: 0 auto;
@@ -810,11 +811,11 @@ input[type="submit"]{
         position: relative;
         top: 0rem;
     }
-    25%{
+    10%{
         position: relative;
         top: -2rem;
     }
-    50%{
+    30%{
         position: relative;
         top: 0rem;
     }
@@ -830,7 +831,23 @@ input[type="submit"]{
         position: relative;
         top: -2rem;
     }
+    15%{
+        position: relative;
+        top: 0rem;
+    }
+    20%{
+        position: relative;
+        top: -1rem;
+    }
+    25%{
+        position: relative;
+        top: 0rem;
+    }
     30%{
+        position: relative;
+        top: -0.5rem;
+    }
+    32%{
         position: relative;
         top: 0rem;
     }
@@ -838,10 +855,20 @@ input[type="submit"]{
         position: relative;
         top: 0rem;
     }
+    /* 100%{
+        position: relative;
+        top: 5rem;
+    } */
 }
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-30px);} 
+    60% {transform: translateY(-15px);} 
+ }
+
 .portfolio-img-0.on-first-click{
-    animation: up-down 4s infinite;
+    animation: bounce 4s infinite;
 }
 
 
