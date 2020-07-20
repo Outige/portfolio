@@ -33,7 +33,7 @@ def send():
         body = str(result['body'])
 
         msg = Message('Mail from your Website', sender=os.environ.get('email'), recipients=['tiegosullivanpsnl@gmail.com'] )
-        msg.body = 'From: ' + email + 'Subject: ' + subject + "\n\n" + body
+        msg.body = 'From: ' + email + '\nSubject: ' + subject + "\n\n" + body
         msg.subject = subject
         mail.send(msg)
     except:
