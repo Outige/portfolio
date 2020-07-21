@@ -63,3 +63,9 @@ body.light-mode .body-all{
     }
 }
 /* End animations */
+
+/* Start bs force lightmode off */
+.mode {
+    display: none !important;
+}
+/* End bs force lightmode off */
