@@ -50,6 +50,35 @@ $(document).ready(function () {
 
     });
 
+  // Toggle gifs
+  $('#project-img-4').on('click', function () {
+    $(this).removeClass('state-on')
+    $(this).toggleClass('state-off')
+
+    $('#project-img-3').removeClass('state-off')
+    $('#project-img-3').toggleClass('state-on')
+
+    // Turn off zoom
+    $('.portfolio-img-3').removeClass('portfolio-img-zoom-on')
+    $('.portfolio-img-3').toggleClass('portfolio-img-zoom-off')
+  });
+
+  $('#project-img-3').on('click', function () {
+    $(this).removeClass('state-on')
+    $(this).toggleClass('state-off')
+    
+    // Turn off clickme bounce
+    $('.portfolio-img-3').removeClass('on-first-click')
+
+    $('#project-img-4').removeClass('state-off')
+    $('#project-img-4').toggleClass('state-on')
+
+    // Turn on zoom
+    $('.portfolio-img-3').removeClass('portfolio-img-zoom-off')
+    $('.portfolio-img-3').toggleClass('portfolio-img-zoom-on')
+
+  });
+
     $('.mode-img.light-mode').on('click', function () {
       $('body').removeClass('light-mode')
       $('body').toggleClass('dark-mode')

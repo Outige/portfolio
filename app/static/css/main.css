@@ -867,16 +867,17 @@ input[type="submit"]{
     60% {transform: translateY(-15px);} 
  }
 
-.portfolio-img-0.on-first-click{
+.portfolio-img-0.on-first-click,
+.portfolio-img-3.on-first-click{
     animation: bounce 4s infinite;
 }
 
 
 
 .project-1-links {
-    text-align: center;
+    /* text-align: center; */
 
-    /* margin-left: 13rem; */
+    margin-left: 10rem;
 }
 
 .portfolio-description i{
@@ -898,7 +899,10 @@ i:hover{
     transition: 1s;
 }
 
-#project-img-0:hover{
+#project-img-0,
+#project-img-1,
+#project-img-3,
+#project-img-4{
     cursor: pointer;
 }
 
