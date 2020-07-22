@@ -1,71 +1,158 @@
-/* Start no-effect in darkmode */
-body.dark-mode .dark-off,
-body.light-mode .light-off{
-    /* display: none; */
-    /* opacity: 0; */
+/* Start mode toggle */
+.mode{
+    float: left;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    height: 4rem;
     width: 8rem;
-    height: 8rem;
     position: absolute;
-    left: 2rem;
-    top: 2rem;
+    top: 5rem;
+    left: 5rem;
     cursor: pointer;
-    transition: 1s;
-    float: left;
-    opacity: 0;
-    pointer-events: none;
 }
-/* body.light-mode .light-off{
-    display: none;
+
+.mode-btn{
+    float: left;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    top: .25rem;
+    z-index: 1;
+
+}
+
+.mode.dark-mode .mode-btn {
+    /* left: 0.3rem; */
+    transform: translateX(0.3rem);
+    /* animation: pulse 2s 2s; */
+    transition: 1s;
+}
+
+.mode.light-mode .mode-btn {
+    /* right: 0.3rem; */
+    transform: translateX(4.2rem);
+    transition: 1s;
+}
+
+.mode .mode-img{
+    float: left;
+    border-radius: 50px;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    top: .25rem;
+}
+
+.mode .mode-img.dark-mode{
+    position: absolute;
+    height: 3.3rem;
+    width: 3.3rem;
+    right: 0.4rem;
+    top: .35rem;
+
+}
+
+.mode .mode-img.light-mode{
+    position: absolute;
+    left: 0.3rem;
+}
+/* End mode toggle */
+
+/* Start mode fade */
+/* .body-all.light-mode{
+    animation: dark-light 2s 2s;
 } */
-/* End no-effect in darkmode */
+/* End mode fade */
 
-body.light-mode .body-all{
-    background-color: rgba(0,0,0,0.05);
+/*Start reusable*/
+body.light-mode .section-heading h1 {
+    color: rgba(0, 0, 0, 0.5);
 }
 
-.light-mode .mode .light-mode,
-.dark-mode .mode .dark-mode{
-    width: 8rem;
-    height: 8rem;
-    position: relative;
-    left: 2rem;
-    top: 2rem;
-    cursor: pointer;
-    float: left;
+body.light-mode .section-heading h6 {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+body.light-mode i {
+    color: rgba(0, 0, 0, 0.7);
+}
+/*End reusable*/
+
+
+
+/* Start landing */
+body.light-mode .landing-text{
+    color: rgba(0, 0, 0, 0.7);
+}
+/* End landing */
+
+
+
+/* Start about */
+body.light-mode .about-details{
+    color: rgba(0, 0, 0, 0.5);
+}
+/* End about */
+
+
+
+/* Start portfolio */
+body.light-mode .portfolio-description h6 {
     opacity: 1;
-    transition: 1s;
+    color: rgba(0, 0, 0, 0.5);
 }
 
-.mode .on-first-click{
-    animation: grow2 1s 1s;
+body.light-mode .portfolio-description h1 {
+    color: rgba(0, 0, 0, 1);
 }
 
-.light-mode .mode .light-mode:hover,
-.dark-mode .mode .dark-mode:hover{
-    width: 10rem;
-    height: 10rem;
-    transition: 1s;
+body.light-mode .portfolio-description li {
+    color: rgba(0, 0, 0, 0.5);
+}
+/* End portfolio */
+
+
+/* Start services */
+body.light-mode .skill h1 {
+    color: rgba(0, 0, 0, 0.5);
+}
+/* End services */
+
+/* Start experience */
+body.light-mode .experience ul{
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Start animations */
-@keyframes grow2 {
+body.light-mode .timeline .date::before{
+    content: attr(data-date);
+    color: rgba(0, 0, 0, 0.8);
+}
+/* End experience */
+
+/* Start cotact */
+body.light-mode section.contact{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/* End contact
+
+/*Start animations*/
+@keyframes dark-light {
     0%{
-        width: 8rem;
-        height: 8rem;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    25%{
+        background-color: rgba(0, 0, 0, 1);
     }
     50%{
-        width: 10rem;
-        height: 10rem;
+        background-color: rgba(255, 255, 255, 1);
+    }
+    75%{
+        background-color: rgba(255, 255, 255, 0.5);
     }
     100%{
-        width: 8rem;
-        height: 8rem;
+        background-color: rgba(255, 255, 255, 0);
     }
 }
-/* End animations */
-
-/* Start bs force lightmode off */
-.mode {
-    display: none !important;
-}
-/* End bs force lightmode off */
+/*Start animations*/

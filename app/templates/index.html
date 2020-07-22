@@ -15,26 +15,18 @@
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo0.png') }}">
 </head>
 
-<style>
-body.light-mode{
-    background: url(../static/images/sitebgw0.jpg)  no-repeat center fixed;
-}
-body.dark-mode{
-    background: url(../static/images/sitebg.jpg)  no-repeat center fixed;
-}
-</style>
-
 <!-- <body style="background: url(../static/images/sitebg.jpg);"> -->
 <!-- <body style="background: url({{ url_for('static', filename='images/sitebgw0.jpg') }})  no-repeat center fixed;"> -->
-<body class="dark-mode">
-<div class="body-all">
-
-    <div class="mode">
-        <img src="../static/images/moon0.png" alt="" class="mode-img light-mode dark-off">
-        <img src="../static/images/sun.png" alt="" class="mode-img dark-mode light-off">
-    </div>
+<body class="light-mode">
+<div class="body-all light-mode">
 
     <header>
+        <div class="mode light-mode">
+            <div class="mode-btn"></div>
+            <img src="../static/images/moon0.png" alt="" class="mode-img dark-mode">
+            <img src="../static/images/sun.png" alt="" class="mode-img light-mode">
+        </div>
+
         <div class="menu-toggler">
             <div class="bar half start"></div>
             <div class="bar"></div>
@@ -405,14 +397,6 @@ body.dark-mode{
                         <h1>NEC XON</h1>
                         <p>Job Shadow</p>
                     </li>
-                    <!-- <li class="date" data-date="2008 - 2011">
-                        <h1>Facebook</h1>
-                        <p>Lorum isplusm</p>
-                    </li>
-                    <li class="date" data-date="2002 - 2007">
-                        <h1>Microsoft</h1>
-                        <p>Lorum isplusm</p>
-                    </li> -->
                 </ul>
             </div>
         </div>
@@ -469,7 +453,16 @@ body.dark-mode{
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="../static/js/main.js"></script>
+    <script src="../static/js/light.js"></script>
     <!-- <script src="{{ url_for('static', filename='images/js/main.js') }}"></script> -->
+    <style>
+        body.light-mode{
+            background: url(../static/images/sitebgw7.jpg)  no-repeat center fixed;
+        }
+        body.dark-mode{
+            background: url(../static/images/sitebg.jpg)  no-repeat center fixed;
+        }
+    </style>
 </div>
 </body>
 </html>

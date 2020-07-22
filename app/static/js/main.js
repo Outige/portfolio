@@ -79,15 +79,15 @@ $(document).ready(function () {
 
   });
 
-    $('.mode-img.light-mode').on('click', function () {
-      $('body').removeClass('light-mode')
-      $('body').toggleClass('dark-mode')
-    });
+    // $('.mode-img.light-mode').on('click', function () {
+    //   $('body').removeClass('light-mode')
+    //   $('body').toggleClass('dark-mode')
+    // });
 
-    $('.mode-img.dark-mode').on('click', function () {
-      $('body').removeClass('dark-mode')
-      $('body').toggleClass('light-mode')
-    });
+    // $('.mode-img.dark-mode').on('click', function () {
+    //   $('body').removeClass('dark-mode')
+    //   $('body').toggleClass('light-mode')
+    // });
 
     AOS.init({
         easing: 'ease',
